@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font: 'Raleway', sans-serif;
+    --primary: #000000;
+    --secondary: #95969D;
+    --optional: #ced4da;
+    --random: #FFFFFF;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: var(--primary);
+}
+
+.box-1 {
+    height: 100vh;
+}

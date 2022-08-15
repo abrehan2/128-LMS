@@ -17,6 +17,21 @@ body {
     overflow-x: hidden;
 }
 
+/* Hide CSS input type number arrows starts here */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* Hide CSS input type number arrows ends here */
+
 /* Styling section starts here */
 
 section{
@@ -29,15 +44,15 @@ section{
 
 /* Styling heading starts here */
 
-.heading-box{
+/* .heading-box{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     background-color: var(--primary);
-    }
+    } */
 
-.box-1, .box-2{
+/*.box-1,*/ .box-2{
 height: 100vh;
 
 }
@@ -250,6 +265,10 @@ border-radius: 1em;
 
 .form-container .box-btn {
     width: 40% !important;
+}
+
+.form-container .form-text{
+    color: var(--secondary);
 }
 
 /* Modal ends here */
