@@ -1,0 +1,226 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font: 'Raleway', sans-serif;
+    --primary: #000000;
+    --secondary: #95969D;
+    --optional: #ced4da;
+    --random: #FFFFFF;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Hide CSS input type number arrows starts here */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/* Hide CSS input type number arrows ends here */
+
+/* To bottom starts here */
+.scroll-down {
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    right: 30px;
+    bottom: 20px;
+    border-radius: 50px;
+    background-color: var(--random);
+    cursor: pointer;
+    z-index: 888;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid var(--primary);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after {
+    top: 30%;
+    animation-delay: .35s
+}
+
+@keyframes scroll-down {
+
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+}
+/* To bottom button ends here */
+
+/* major-box starts here */
+.major-box {
+    height: 100vh;
+    padding: 0;
+}
+
+.major-box .row {
+    margin: 0;
+    height: 100%;
+}
+
+.major-box .row .heading-set {
+    padding: 0;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.major-box .row .heading-set h3 {
+    font-family: var(--font);
+    color: var(--primary);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.major-box .row .heading-set p {
+    font-family: var(--font);
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.major-box .row .form-set {
+    padding: 0;
+    height: 50%;
+}
+
+.form-set .form-box {
+    max-height: 100%;
+    height: 300px;
+    display: flex;
+    row-gap: 1.5em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-set .form-box .input-box {
+    height: min-content;
+}
+
+.form-set .form-box .input-box .form-control{
+
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--optional);
+}
+
+.form-set .form-box .input-box .form-control:focus {
+    border-bottom-color: var(--primary);
+    font-family: var(--font);
+    outline: none;
+}
+
+.form-set .form-box .input-box label {
+    font-family: var(--font);
+    font-weight: 400;
+    color: var(--primary);
+
+}
+
+.form-set .form-box .btn-box{
+    width: 20%;
+    overflow: hidden;
+}
+
+.form-set .form-box .btn-box button{
+    width: 100%;
+    font-family: var(--font);
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: var(--primary);
+    color: var(--random);
+    border-radius: 1em;
+}
+
+.form-text .form-text-set {
+    font-family: var(--font);
+    color: var(--primary);
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.form-text .form-text-set span {
+    font-weight: 600;
+    cursor: pointer;
+}
+/* major-box ends here */
+
+/* Media Query starts here */
+
+@media screen and (max-width: 476px) {
+    .form-set .form-box .btn-box {
+        width: 35%;
+        overflow: hidden;
+    }
+
+   .heading-set .phone-text-heading{
+        font-size: 2em !important;
+    }
+     
+          .heading-set  .phone-p-heading{
+            font-size: 1em !important;
+          }
+
+.major-box .row .heading-set{
+    height: 40% !important;
+}
+
+.major-box .row .form-set {
+   
+    height: 50% !important;
+}
+
+
+
+   }
+
+
+/* Media Query ends here */

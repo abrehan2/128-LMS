@@ -43,16 +43,7 @@ section{
 /* Styling section ends here */
 
 /* Styling heading starts here */
-
-/* .heading-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    background-color: var(--primary);
-    } */
-
-/*.box-1,*/ .box-2{
+ .box-2{
 height: 100vh;
 
 }
@@ -68,12 +59,12 @@ height: 100%;
 
 .box-2 .row .heading-set{
     padding: 0;
-    height: 40%;
+    height: 40% !important;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-
+   
 }
 
 .box-2 .row .heading-set h3{
@@ -96,12 +87,12 @@ height: 100%;
 
 /* Styling form starts here */
 
-.box-2 .row .form-set{
+.box-2 .row .form-set, .form-sign .form-set{
     padding: 0;
-    height: 60%;
+    height: 50% !important;
 }
 
-.form-set .form-box{
+.form-set .form-box {
     max-height: 100%;
     height: 300px;
     display: flex;
@@ -110,7 +101,7 @@ height: 100%;
     align-items: center;
 }
 
-.form-set .form-box .input-box{
+.form-set .form-box .input-box, .form-set .sign-box{
     height: min-content;
 }
 
@@ -122,6 +113,25 @@ height: 100%;
    border-bottom: 1px solid var(--optional);   
    }
 
+   .form-set .sign-form{
+    box-shadow: none;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid var(--optional);
+   }
+
+   .form-set .sign-form:focus{
+    border-bottom-color: var(--primary);
+        font-family: var(--font);
+        outline: none;
+   }
+
+   .form-set .sign-box label, .form-set .sign-box select{
+    font-family: var(--font);
+    font-weight: 400;
+    color: var(--primary);
+   }
+   
    
 .form-set .form-box .input-box .form-control:focus, .input-box .select:focus{
     border-bottom-color: var(--primary);
@@ -133,17 +143,16 @@ height: 100%;
 .form-set .form-box .input-box label{
     font-family: var(--font);
     font-weight: 400;
-    color: var(--primary);
-           
+    color: var(--primary);           
 }
 
 
-.form-set .form-box .btn-box{
+.form-set .form-box .btn-box, .form-container .signBtn{
 width: 20%;
 overflow: hidden;
 }
 
-.form-set .form-box .btn-box button {
+.form-set .form-box .btn-box button, .form-container .signBtn button {
 width: 100%;
 font-family: var(--font);
 font-weight: 500;
@@ -161,6 +170,13 @@ border-radius: 1em;
     font-size: 1em;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.form-container .sign-box .form-text{
+    font-family: var(--font) ;
+    font-weight: 500;
+    font-size: 1em;
+      
 }
 
 .form-text .form-text-set span{
@@ -282,9 +298,22 @@ border-radius: 1em;
             overflow: hidden;
         }
 
-                .form-container .box-btn {
+        .form-container .box-btn {
                     width: 30% !important;
                 }
+.box-2 .row .form-set {
+    padding: 0;
+    height: 60% !important;
+}
+
+.modal-body .modal-title{
+    font-size: 1.5em !important;
+}
+
+.modal-body .modal-intro p {
+    font-size: 1em !important;
+} 
+                
 }
 
 
