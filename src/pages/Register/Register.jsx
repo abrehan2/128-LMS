@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../pages/Register/Register.css";
 import Logo from "../../components/Logo/Logo";
-import { useNavigate } from "react-router-dom";
 
 const Register = () =>{    
 
@@ -28,9 +28,7 @@ const handleSign = (e) => {
 }
 
 // Sign in API starts here
-
 const submitSign = async () => {
-//    const {signEmail, signPassword} = sign;
 
 try{
 
@@ -45,37 +43,24 @@ body: JSON.stringify({signE:sign.signE, signP:sign.signP})
 const signData = await response.json();
 getData = signData;
 
-// console.log(signData)
-
-
-
-
 }
 catch(error){
 console.log(error)
 }
 }
 
-console.log(getData)
-
-
 // Sign in API ends here
 
-if(credentials.cnic.length!==13)
+if(credentials.cnic.length!===13)
 {
 option = true;
-
-
 }
-
 
 // Sign up API starts here
 const handleInput = (e) =>{
 setCredentials({...credentials, [e.target.name] : e.target.value});
-
-console.log(credentials.status)
-
 }
+
 const Submit = async (e) => {
 const {firstname, lastname, email, cnic, designation, contactno, password, status} = credentials; 
 
@@ -86,7 +71,7 @@ headers: {
 "Content-Type": "application/json", },
 body: JSON.stringify({firstname, lastname, email,  contactno, cnic, designation, password, status})});
 const data = await response.json();
-console.log(data);}
+}
 
 catch(error){
 console.log(error)
@@ -99,19 +84,15 @@ return(
 <>
 
 {/* Main section starts here */}
-
 <section>
-
+    
 {/* Heading stuff starts here */}
-
 <div className="container-fluid">
 <div className="row min-vh-100" >
 {box && <Logo/>} 
-
 {/* Heading stuff ends here */}
 
 {/* Form container starts here */}
-
 <div className="col-lg-7 box-2">
 <div className="row">
 <div className="col-lg-12 heading-set">
@@ -134,35 +115,26 @@ return(
 </div>
 <div className="form-text">
 <p className="form-text-set">Dont have an account? <span id="signUp" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sign Up</span></p>
-
 {/* Rendering of Modal starts here */}
-
-
 {/* Rendering of Modal ends here */}
 </div>
 </div>
 </form>
-
 </div>
-
 {/* Form container ends here */}
-
 </div>
 </div>
 
 {/* To bottom button starts here */}
-
 {btn && <div className="scroll-down d-lg-none d-block"  onClick={() => {setBox(false); setBtn(false);}} id="scroll">
 </div>
 }
-
 {/* To bottom button ends here */}
-
 </div>
 </div>          
 </section>
-{/* Main section ends here */}
 
+{/* Main section ends here */}
 <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 <div className="modal-dialog">
 <div className="modal-content">
@@ -176,7 +148,6 @@ return(
 </div>
 
 {/* Modal form starts here */}
-
 <form onSubmit={Submit} className="form-sign">
 <div className="row form-set">
 <div className="col-md-6 form-floating sign-box">
@@ -223,29 +194,17 @@ return(
 </div>
 </div>
 <div className="form-container d-flex justify-content-center gy-3">
-<div className="btn-box box-btn signBtn">
-
-
-
-        
- <button type="submit" className="btn" disabled={option}>sign up</button>
-
-    {/* <button type="submit" className="btn">sign up</button> */}
-
+<div className="btn-box box-btn signBtn">        
+<button type="submit" className="btn" disabled={option}>sign up</button>  
 </div>
 </div>
 </div>
 </form>
 </div>
-
 {/* Modal form ends here */}
-
 </div> 
 </div>
-</div>
-
-
-    
+</div>   
 
 </>
 )
