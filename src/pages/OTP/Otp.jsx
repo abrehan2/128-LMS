@@ -4,7 +4,6 @@ import "../../pages/OTP/Otp.css";
 
 const Otp = () => {
 
-
 const [box, setBox] = useState(true);
 const [btn, setBtn] = useState(true);
 
@@ -14,13 +13,9 @@ const [btn, setBtn] = useState(true);
 {/* Section starts here */}
 
 {/* Heading stuff starts here */}
-
 <div className="container-fluid">
 <div className="row min-vh-100">
 {box && <Logo/>} 
-
-
-
 {/* Heading stuff ends here */}
 
 
@@ -30,7 +25,6 @@ const [btn, setBtn] = useState(true);
 {/* To bottom button ends here */}
 
 {/* Form container starts here */}
-
 <div className="col-lg-7 major-box">
 <div className="row">
 <div className="col-lg-12 heading-set">
@@ -46,7 +40,6 @@ const [btn, setBtn] = useState(true);
 </div>
 <div className="form-text">
 <p className="form-text-set"><span id="signUp">Resend Code?</span></p>
-
 </div>
 <div className="btn-box">
 <button type="submit" className="btn">verify code</button>
@@ -54,47 +47,13 @@ const [btn, setBtn] = useState(true);
 </div>
 </form>
 </div>
-
 {/* Form container ends here */}
-
 </div>
 </div>
-
-
-
-
-
 </div>    
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {/* Section ends here */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </>
+ </>
   )
 }
 
