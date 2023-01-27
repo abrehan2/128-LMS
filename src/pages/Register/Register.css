@@ -9,8 +9,7 @@
     --primary: #000000;
     --secondary: #95969D;
     --optional: #ced4da;
-    --random: #FFFFFF;
-    
+    --random: #FFFFFF;    
 }
 
 body {
@@ -28,24 +27,19 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
-
-
 /* Hide CSS input type number arrows ends here */
 
 /* Styling section starts here */
-
 section{
     height: 100vh;
     width: 100%;
     overflow: hidden;
 }
-
 /* Styling section ends here */
 
 /* Styling heading starts here */
  .box-2{
 height: 100vh;
-
 }
 
 .box-2{
@@ -63,8 +57,7 @@ height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-direction: column;
-   
+    flex-direction: column;   
 }
 
 .box-2 .row .heading-set h3{
@@ -82,11 +75,9 @@ height: 100%;
     font-weight: 500;
     font-size: 1.2em;
 }
-
 /* Styling heading ends here */
 
 /* Styling form starts here */
-
 .box-2 .row .form-set, .form-sign .form-set{
     padding: 0;
     height: 50% !important;
@@ -130,8 +121,7 @@ height: 100%;
     font-family: var(--font);
     font-weight: 400;
     color: var(--primary);
-   }
-   
+   }   
    
 .form-set .form-box .input-box .form-control:focus, .input-box .select:focus{
     border-bottom-color: var(--primary);
@@ -139,13 +129,11 @@ height: 100%;
     outline: none;
    }
 
-
 .form-set .form-box .input-box label{
     font-family: var(--font);
     font-weight: 400;
     color: var(--primary);           
 }
-
 
 .form-set .form-box .btn-box, .form-container .signBtn{
 width: 20%;
@@ -175,19 +163,16 @@ border-radius: 1em;
 .form-container .sign-box .form-text{
     font-family: var(--font) ;
     font-weight: 500;
-    font-size: 1em;
-      
+    font-size: 1em;      
 }
 
 .form-text .form-text-set span{
     font-weight: 600;
     cursor: pointer;
 }
-
 /* Styling form ends here */
 
 /* To bottom starts here */
-
 .scroll-down {
     position: absolute;
     height: 50px;
@@ -239,11 +224,9 @@ border-radius: 1em;
         top: 90%;
     }
 }
-
 /* To bottom button ends here */
 
 /* Modal starts here */
-
 .modal .modal-header #close-btn{
     box-shadow: none;
 }
@@ -258,7 +241,6 @@ border-radius: 1em;
     right: 0;
     top: -25px;
 }
-
 
 .modal .modal-body .modal-intro h3{
     text-align: center;
@@ -278,7 +260,6 @@ border-radius: 1em;
     
 }
 
-
 .form-container .box-btn {
     width: 40% !important;
 }
@@ -286,12 +267,10 @@ border-radius: 1em;
 .form-container .form-text{
     color: var(--secondary);
 }
-
 /* Modal ends here */
 
 
 /* Media Query starts here */
-
 @media screen and (max-width: 476px) {
     .form-set .form-box .btn-box {
             width: 25%;
@@ -312,9 +291,6 @@ border-radius: 1em;
 
 .modal-body .modal-intro p {
     font-size: 1em !important;
-} 
-                
+}                
 }
-
-
 /* Media Query ends here */
