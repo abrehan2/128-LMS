@@ -12,7 +12,6 @@
     --secondary: #95969D;
     --optional: #ced4da;
     --random: #FFFFFF;
-
 }
 
 body {
@@ -194,7 +193,6 @@ input[type=number] {
 /* major-box ends here */
 
 /* Media Query starts here */
-
 @media screen and (max-width: 476px) {
     .form-set .form-box .btn-box {
         width: 35%;
@@ -215,12 +213,6 @@ input[type=number] {
 
 .major-box .row .form-set {
    
-    height: 50% !important;
-}
-
-
-
+    height: 50% !important;}
    }
-
-
 /* Media Query ends here */
